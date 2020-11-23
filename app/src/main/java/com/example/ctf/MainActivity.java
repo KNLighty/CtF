@@ -2,7 +2,9 @@ package com.example.ctf;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import java.text.DateFormat;
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         if (checkDateTime(currentDate)) {
             Lesson currentLesson = getCurrentLesson(currentDate);
 
-            resultMessage = "     Сейчас идёт " + currentLesson;
+            resultMessage = "       Сейчас идёт " + currentLesson;
             int hoursLeft, minutesLeft, secondsLeft;
             hoursLeft = currentLesson.timeLeft[0];
             minutesLeft = currentLesson.timeLeft[1];
@@ -101,5 +103,11 @@ public class MainActivity extends AppCompatActivity {
         else if (hour == 14) lessonNumber = 4;
 
         return new Lesson(lessonNumber, hour, minutes, seconds);
+    }
+
+    public void clickReloadButton(View view) {
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
     }
 }

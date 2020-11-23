@@ -16,4 +16,18 @@
         android:layout_marginTop="186dp"
         android:padding="10dp"
         android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/reloadButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="23dp"
+        android:backgroundTint="#DAD3D3"
+        android:onClick="clickReloadButton"
+        android:text="Обновить"
+        android:textColor="#000"
+        android:textSize="16sp" />
 </RelativeLayout>
